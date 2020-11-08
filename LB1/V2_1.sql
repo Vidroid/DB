@@ -1,0 +1,29 @@
+USE master;
+GO
+
+CREATE DATABASE NewDB;
+GO
+
+USE NewDB;
+GO
+
+CREATE SCHEMA sales;
+GO
+
+CREATE SCHEMA persons;
+GO
+
+CREATE TABLE sales.Orders (OrderNum INT NULL);
+GO
+
+BACKUP DATABASE NewDB TO DISK = 'D:\BataDase\Artamonov.bak';
+GO
+
+USE MASTER;
+GO
+
+DROP DATABASE NewDB;
+GO
+
+RESTORE DATABASE NewDB FROM DISK = 'D:\BataDase\Artamonov.bak';
+GO
